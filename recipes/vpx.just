@@ -3,21 +3,18 @@ import 'config.just'
 vpx_dir := source_dir / 'libvpx'
 
 # Clone libvpx source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning libvpx')}}'
-  git clone https://chromium.googlesource.com/webm/libvpx.git
+  git clone https://chromium.googlesource.com/webm/libvpx.git '{{vpx_dir}}'
 
 # Pull libvpx source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling libvpx')}}'
-  git -C libvpx pull 
+  git -C '{{vpx_dir}}' pull
 
 # Get libvpx source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting libvpx')}}'

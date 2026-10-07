@@ -4,21 +4,18 @@ x265_dir := source_dir / 'x265'
 x265_build_dir := source_dir / 'x265_build'
 
 # Clone libx265 source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning libx265')}}'
-  gh repo clone Multicorewareinc/x265
+  gh repo clone Multicorewareinc/x265 '{{x265_dir}}'
 
 # Pull libx265 source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling libx265')}}'
-  git -C x265 pull
+  git -C '{{x265_dir}}' pull
 
 # Get libx265 source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting libx265')}}'

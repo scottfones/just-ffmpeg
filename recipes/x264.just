@@ -3,21 +3,18 @@ import 'config.just'
 x264_dir := source_dir / 'x264'
 
 # Clone libx264 source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning libx264')}}'
-  git clone --depth 1 https://code.videolan.org/videolan/x264.git
+  git clone --depth 1 https://code.videolan.org/videolan/x264.git '{{x264_dir}}'
 
 # Pull libx264 source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling libx264')}}'
-  git -C x264 pull 
+  git -C '{{x264_dir}}' pull
 
 # Get libx264 source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting libx264')}}'

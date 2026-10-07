@@ -4,21 +4,18 @@ dav1d_dir := source_dir / 'dav1d'
 dav1d_build_dir := dav1d_dir / 'build'
 
 # Clone dav1d source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning dav1d')}}'
-  git clone --depth 1 https://code.videolan.org/videolan/dav1d.git
+  git clone --depth 1 https://code.videolan.org/videolan/dav1d.git '{{dav1d_dir}}'
 
 # Pull dav1d source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling dav1d')}}'
-  git -C dav1d pull
+  git -C '{{dav1d_dir}}' pull
 
 # Get dav1d source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting dav1d')}}'

@@ -5,12 +5,12 @@ mp3_link := f"https://sourceforge.net/projects/lame/files/lame/{{mp3_ver}}/lame-
 mp3_ver := "4.0"
 
 # Get LAME source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting LAME')}}'
   @echo 'source exists... {{ if path_exists(mp3_dir) { 'true' } else { 'false' } }}'
-  @[ -d "{{mp3_dir}}" ] || curl -fsSL "{{mp3_link}}" | tar -xvz
+  @mkdir -p '{{source_dir}}'
+  @[ -d "{{mp3_dir}}" ] || curl -fsSL "{{mp3_link}}" | tar -xvz -C '{{source_dir}}'
   @just mp3::clean
 
 # Configure LAME

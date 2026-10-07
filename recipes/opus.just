@@ -3,21 +3,18 @@ import 'config.just'
 opus_dir := source_dir / 'opus'
 
 # Clone libopus source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning libopus')}}'
-  gh repo clone xiph/opus
+  gh repo clone xiph/opus '{{opus_dir}}'
 
 # Pull libopus source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling libopus')}}'
-  git -C opus pull 
+  git -C '{{opus_dir}}' pull
 
 # Get libopus source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting libopus')}}'

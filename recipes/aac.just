@@ -3,22 +3,19 @@ import 'config.just'
 aac_dir := source_dir / 'fdk-aac'
 
 # Clone libfdk_aac source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning libfdk_aac')}}'
-  gh repo clone mstorsjo/fdk-aac 
+  gh repo clone mstorsjo/fdk-aac '{{aac_dir}}'
 
 
 # Pull libfdk_aac source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling libfdk_aac')}}'
-  git -C fdk-aac pull 
+  git -C '{{aac_dir}}' pull
 
 # Get libfdk_aac source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting libfdk_aac')}}'

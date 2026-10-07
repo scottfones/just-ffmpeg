@@ -4,21 +4,18 @@ aom_dir := source_dir / 'aom'
 aom_build_dir := source_dir / 'aom_build'
 
 # Clone aom source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning aom')}}'
-  git clone --depth 1 https://aomedia.googlesource.com/aom
+  git clone --depth 1 https://aomedia.googlesource.com/aom '{{aom_dir}}'
 
 # Pull aom source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling aom')}}'
-  git -C aom pull 
+  git -C '{{aom_dir}}' pull
 
 # Get aom source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting aom')}}'

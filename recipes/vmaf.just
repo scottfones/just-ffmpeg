@@ -5,21 +5,18 @@ vmaf_lib_dir := vmaf_dir / 'libvmaf'
 vmaf_build_dir := vmaf_lib_dir / 'build'
 
 # Clone libvmaf source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning libvmaf')}}'
-  git clone --depth 1 https://github.com/Netflix/vmaf.git
+  git clone --depth 1 https://github.com/Netflix/vmaf.git '{{vmaf_dir}}'
 
 # Pull libvmaf source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling libvmaf')}}'
-  git -C vmaf pull
+  git -C '{{vmaf_dir}}' pull
 
 # Get libvmaf source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting libvmaf')}}'

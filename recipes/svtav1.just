@@ -4,21 +4,18 @@ svtav1_dir := source_dir / 'SVT-AV1'
 svtav1_build_dir := svtav1_dir / 'build'
 
 # Clone SVT-AV1 source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning SVT-AV1')}}'
-  git clone https://gitlab.com/AOMediaCodec/SVT-AV1.git
+  git clone https://gitlab.com/AOMediaCodec/SVT-AV1.git '{{svtav1_dir}}'
 
 # Pull SVT-AV1 source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling SVT-AV1')}}'
-  git -C SVT-AV1 pull
+  git -C '{{svtav1_dir}}' pull
 
 # Get SVT-AV1 source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting SVT-AV1')}}'

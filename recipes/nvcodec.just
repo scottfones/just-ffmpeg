@@ -5,21 +5,18 @@ nvcodec_dir := source_dir / 'nv-codec-headers'
 nvcodec_branch := 'sdk/13.0'
 
 # Clone nv-codec-headers source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning nv-codec-headers')}}'
-  git clone --depth 1 --branch '{{nvcodec_branch}}' https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+  git clone --depth 1 --branch '{{nvcodec_branch}}' https://git.videolan.org/git/ffmpeg/nv-codec-headers.git '{{nvcodec_dir}}'
 
 # Pull nv-codec-headers source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling nv-codec-headers')}}'
-  git -C nv-codec-headers pull
+  git -C '{{nvcodec_dir}}' pull
 
 # Get nv-codec-headers source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting nv-codec-headers')}}'

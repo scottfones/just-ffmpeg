@@ -64,21 +64,18 @@ ffmpeg_hardware := [
 ]
 
 # Clone FFmpeg source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning FFmpeg')}}'
-  git clone --depth 1 https://git.ffmpeg.org/ffmpeg.git
+  git clone --depth 1 https://git.ffmpeg.org/ffmpeg.git '{{ffmpeg_dir}}'
 
 # Pull FFmpeg source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling FFmpeg')}}'
-  git -C ffmpeg pull
+  git -C '{{ffmpeg_dir}}' pull
 
 # Get FFmpeg source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting FFmpeg')}}'

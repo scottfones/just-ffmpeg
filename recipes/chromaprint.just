@@ -4,21 +4,18 @@ chromaprint_dir := source_dir / 'chromaprint'
 chromaprint_build_dir := chromaprint_dir / 'build'
 
 # Clone chromaprint source
-[working-directory(source_dir)]
 clone:
   @echo ''
   @echo '{{style(h2, 'Cloning chromaprint')}}'
-  git clone --depth 1 https://github.com/acoustid/chromaprint.git
+  git clone --depth 1 https://github.com/acoustid/chromaprint.git '{{chromaprint_dir}}'
 
 # Pull chromaprint source
-[working-directory(source_dir)]
 pull:
   @echo ''
   @echo '{{style(h2, 'Pulling chromaprint')}}'
-  git -C chromaprint pull
+  git -C '{{chromaprint_dir}}' pull
 
 # Get chromaprint source
-[working-directory(source_dir)]
 get:
   @echo ''
   @echo '{{style(h2, 'Getting chromaprint')}}'
