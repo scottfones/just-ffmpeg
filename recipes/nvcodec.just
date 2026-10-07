@@ -32,4 +32,5 @@ install:
 
 # Build nv-codec-headers
 build: && get install
+  @echo ''
   @echo '{{style(h1, 'Building nv-codec-headers')}}'

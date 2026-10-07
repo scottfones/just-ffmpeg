@@ -47,6 +47,7 @@ install:
 
 # Build aom
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building aom')}}'
 
 # Clean aom build artifacts

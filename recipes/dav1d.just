@@ -47,6 +47,7 @@ install:
 
 # Build dav1d
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building dav1d')}}'
 
 # Clean dav1d build artifacts

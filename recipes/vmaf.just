@@ -48,6 +48,7 @@ install:
 
 # Build libvmaf
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building libvmaf')}}'
 
 # Clean libvmaf build artifacts

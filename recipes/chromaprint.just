@@ -47,6 +47,7 @@ install:
 
 # Build chromaprint
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building chromaprint')}}'
 
 # Clean chromaprint build artifacts

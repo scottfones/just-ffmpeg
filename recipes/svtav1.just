@@ -47,6 +47,7 @@ install:
 
 # Build SVT-AV1
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building SVT-AV1')}}'
 
 # Clean SVT-AV1 build artifacts

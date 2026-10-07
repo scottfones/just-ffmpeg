@@ -117,6 +117,7 @@ install:
 
 # Build FFmpeg
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building FFmpeg')}}'
 
 # Clean FFmpeg build artifacts

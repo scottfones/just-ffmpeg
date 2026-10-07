@@ -47,6 +47,7 @@ install:
 
 # Build libopus
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building libopus')}}'
 
 # Clean libopus build artifacts

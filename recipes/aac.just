@@ -48,6 +48,7 @@ install:
 
 # Build libfdk_aac
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building libfdk_aac')}}'
 
 # Clean libfdk_aac build artifacts

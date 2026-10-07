@@ -45,6 +45,7 @@ install:
 
 # Build libvpx
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building libvpx')}}'
 
 # Clean libvpx build artifacts

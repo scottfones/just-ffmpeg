@@ -46,6 +46,7 @@ install:
 
 # Build libx264
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building libx264')}}'
 
 # Clean libx264 build artifacts

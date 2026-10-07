@@ -47,6 +47,7 @@ install:
 
 # Build libx265
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building libx265')}}'
 
 # Clean libx265 build artifacts

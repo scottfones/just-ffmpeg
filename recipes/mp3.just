@@ -37,6 +37,7 @@ install:
 
 # Build LAME
 build: && get configure make install
+  @echo ''
   @echo '{{style(h1, 'Building LAME')}}'
 
 # Clean LAME build artifacts
