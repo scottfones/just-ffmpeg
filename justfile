@@ -16,5 +16,5 @@ mod x264 'recipes/x264.just'
 mod x265 'recipes/x265.just'
 
 # Build everything
-build-all: && aac::build opus::build mp3::build aom::build x264::build vpx::build x265::build ffmpeg::build
+build-all: && aac::build aom::build chromaprint::build dav1d::build mp3::build nvcodec::build opus::build svtav1::build vmaf::build vpx::build x264::build x265::build ffmpeg::build
   @echo '{{ style(h1, "Building everything") }}'
